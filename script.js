@@ -423,12 +423,12 @@ document.addEventListener('DOMContentLoaded', () => {
             showStatus('Sending message...', 'info');
 
             emailjs.send('service_uefdvuq', 'template_j0z1ncc', {
+                name: name,
+                email: email,
                 from_name: name,
                 from_email: email,
                 user_name: name,
                 user_email: email,
-                name: name,
-                email: email,
                 subject: subject,
                 user_subject: subject,
                 message: message,
