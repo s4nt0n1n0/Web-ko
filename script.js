@@ -36,6 +36,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ==========================================
+       EMAILJS INITIALIZATION
+       ========================================== */
+    if (window.emailjs) {
+        emailjs.init('-T69XB01R6lzlq9IX');
+    }
+
+    /* ==========================================
        MOBILE NAVIGATION MENU
        ========================================== */
     const mobileToggle = document.getElementById('mobile-toggle');
@@ -404,6 +411,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const name = document.getElementById('form-name').value;
             const email = document.getElementById('form-email').value;
+            const subject = document.getElementById('form-subject').value;
             const message = document.getElementById('form-message').value;
 
             // Simple client verification check
@@ -412,13 +420,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            // Simulate form submission to backend
             showStatus('Sending message...', 'info');
 
-            setTimeout(() => {
+            emailjs.send('service_uefdvuq', 'template_j0z1ncc', {
+                from_name: name,
+                from_email: email,
+                subject: subject,
+                message: message
+            })
+            .then(() => {
                 showStatus(`Thank you, ${name}! Your message has been sent successfully.`, 'success');
                 contactForm.reset();
-            }, 1500);
+            })
+            .catch((error) => {
+                console.error('EmailJS error:', error);
+                showStatus('Sorry, something went wrong while sending your message. Please try again later.', 'error');
+            });
         });
     }
 
