@@ -425,8 +425,15 @@ document.addEventListener('DOMContentLoaded', () => {
             emailjs.send('service_uefdvuq', 'template_j0z1ncc', {
                 from_name: name,
                 from_email: email,
+                user_name: name,
+                user_email: email,
+                name: name,
+                email: email,
                 subject: subject,
-                message: message
+                user_subject: subject,
+                message: message,
+                user_message: message,
+                reply_to: email
             })
             .then(() => {
                 showStatus(`Thank you, ${name}! Your message has been sent successfully.`, 'success');
