@@ -13,89 +13,89 @@
     --transition-normal: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 
-    /* Light Theme — Sea Turtle IT Palette */
-    --bg-gradient: linear-gradient(135deg, #F8FAF9 0%, #eaf6f5 50%, #d6eeee 100%);
-    --bg-panel: rgba(248, 250, 249, 0.92);
-    --bg-panel-solid: #F8FAF9;
-    --border-panel: #073B4C;
-    --border-subtle: #A8DADC;
+    /* Light Theme — Vibrant Sea Turtle */
+    --bg-gradient: linear-gradient(150deg, #e8faf5 0%, #c8f0e4 40%, #a8e6d4 100%);
+    --bg-panel: rgba(232, 250, 245, 0.92);
+    --bg-panel-solid: #edfaf5;
+    --border-panel: #047857;
+    --border-subtle: #6ee7c7;
     
-    --text-primary: #102A43;
-    --text-secondary: #073B4C;
-    --text-muted: #0E7C7B;
+    --text-primary: #064e3b;
+    --text-secondary: #065f46;
+    --text-muted: #059669;
     
-    --accent-emerald: #0E7C7B;
-    --accent-emerald-hover: #2A9D8F;
-    --accent-emerald-rgb: 14, 124, 123;
+    --accent-emerald: #00B09B;
+    --accent-emerald-hover: #00c9a7;
+    --accent-emerald-rgb: 0, 176, 155;
     
-    --accent-blue: #073B4C;
-    --accent-blue-hover: #0E7C7B;
-    --accent-blue-rgb: 7, 59, 76;
+    --accent-blue: #047857;
+    --accent-blue-hover: #00B09B;
+    --accent-blue-rgb: 4, 120, 87;
     
-    --accent-purple: #2A9D8F;
-    --accent-purple-hover: #0E7C7B;
-    --accent-purple-rgb: 42, 157, 143;
+    --accent-purple: #10b981;
+    --accent-purple-hover: #00B09B;
+    --accent-purple-rgb: 16, 185, 129;
     
-    --accent-gradient: linear-gradient(135deg, #073B4C 0%, #0E7C7B 60%, #2A9D8F 100%);
+    --accent-gradient: linear-gradient(135deg, #064e3b 0%, #00B09B 55%, #1de3c7 100%);
     
-    --nav-bg: rgba(7, 59, 76, 0.97);
-    --nav-border: #0E7C7B;
+    --nav-bg: rgba(4, 78, 59, 0.97);
+    --nav-border: #00B09B;
     
-    --card-shadow: 0 4px 24px rgba(14, 124, 123, 0.08);
-    --card-shadow-hover: 0 8px 32px rgba(14, 124, 123, 0.18);
-    --glow-color: rgba(14, 124, 123, 0.06);
-    --glow-color-blue: rgba(42, 157, 143, 0.06);
+    --card-shadow: 0 4px 24px rgba(0, 176, 155, 0.12);
+    --card-shadow-hover: 0 10px 36px rgba(0, 176, 155, 0.25);
+    --glow-color: rgba(0, 176, 155, 0.08);
+    --glow-color-blue: rgba(29, 227, 199, 0.08);
     
-    --particle-color: rgba(14, 124, 123, 0.30);
-    --particle-color-rgb: 14, 124, 123;
+    --particle-color: rgba(0, 176, 155, 0.35);
+    --particle-color-rgb: 0, 176, 155;
     
     --sand-accent: #F4E3C1;
-    --scrollbar-bg: #d6eeee;
-    --scrollbar-thumb: #0E7C7B;
-    --scrollbar-thumb-hover: #073B4C;
+    --scrollbar-bg: #c8f0e4;
+    --scrollbar-thumb: #00B09B;
+    --scrollbar-thumb-hover: #064e3b;
 }
 
-/* Dark Theme — Deep Ocean */
+/* Dark Theme — Deep Ocean Night */
 body.dark {
-    --bg-gradient: linear-gradient(135deg, #040f14 0%, #073B4C 50%, #0a2233 100%);
-    --bg-panel: rgba(7, 59, 76, 0.85);
-    --bg-panel-solid: #051820;
-    --border-panel: #0E7C7B;
-    --border-subtle: #0a3040;
+    --bg-gradient: linear-gradient(150deg, #022c22 0%, #064e3b 45%, #065f46 100%);
+    --bg-panel: rgba(4, 47, 36, 0.88);
+    --bg-panel-solid: #011a12;
+    --border-panel: #00B09B;
+    --border-subtle: #065f46;
     
-    --text-primary: #F8FAF9;
-    --text-secondary: #A8DADC;
-    --text-muted: #2A9D8F;
+    --text-primary: #ecfdf5;
+    --text-secondary: #6ee7b7;
+    --text-muted: #34d399;
     
-    --accent-emerald: #2A9D8F;
-    --accent-emerald-hover: #0E7C7B;
-    --accent-emerald-rgb: 42, 157, 143;
+    --accent-emerald: #1de3c7;
+    --accent-emerald-hover: #00B09B;
+    --accent-emerald-rgb: 29, 227, 199;
     
-    --accent-blue: #A8DADC;
-    --accent-blue-hover: #2A9D8F;
-    --accent-blue-rgb: 168, 218, 220;
+    --accent-blue: #6ee7b7;
+    --accent-blue-hover: #1de3c7;
+    --accent-blue-rgb: 110, 231, 183;
     
-    --accent-purple: #0E7C7B;
-    --accent-purple-hover: #2A9D8F;
-    --accent-purple-rgb: 14, 124, 123;
+    --accent-purple: #00B09B;
+    --accent-purple-hover: #1de3c7;
+    --accent-purple-rgb: 0, 176, 155;
     
-    --accent-gradient: linear-gradient(135deg, #0E7C7B 0%, #2A9D8F 60%, #A8DADC 100%);
+    --accent-gradient: linear-gradient(135deg, #00B09B 0%, #1de3c7 60%, #6ee7b7 100%);
     
-    --nav-bg: rgba(4, 15, 20, 0.97);
-    --nav-border: #0E7C7B;
+    --nav-bg: rgba(1, 14, 9, 0.98);
+    --nav-border: #00B09B;
     
-    --card-shadow: 0 4px 24px rgba(14, 124, 123, 0.15);
-    --card-shadow-hover: 0 8px 32px rgba(42, 157, 143, 0.28);
-    --glow-color: rgba(14, 124, 123, 0.10);
-    --glow-color-blue: rgba(42, 157, 143, 0.10);
+    --card-shadow: 0 4px 24px rgba(29, 227, 199, 0.12);
+    --card-shadow-hover: 0 10px 36px rgba(29, 227, 199, 0.28);
+    --glow-color: rgba(0, 176, 155, 0.12);
+    --glow-color-blue: rgba(29, 227, 199, 0.12);
     
-    --particle-color: rgba(168, 218, 220, 0.20);
-    --particle-color-rgb: 168, 218, 220;
+    --particle-color: rgba(110, 231, 183, 0.22);
+    --particle-color-rgb: 110, 231, 183;
     
     --sand-accent: #F4E3C1;
-    --scrollbar-bg: #051820;
-    --scrollbar-thumb: #0E7C7B;
-    --scrollbar-thumb-hover: #2A9D8F;
+    --scrollbar-bg: #011a12;
+    --scrollbar-thumb: #00B09B;
+    --scrollbar-thumb-hover: #1de3c7;
 }
 
 /* ==========================================
@@ -161,7 +161,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section {
-    padding: 100px 20px;
+    padding: 60px 20px;
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
@@ -171,7 +171,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .section-header {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 
 .section-subtitle {
@@ -209,7 +209,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .container-grid {
     display: grid;
-    gap: 30px;
+    gap: 20px;
 }
 
 /* Buttons */
@@ -311,16 +311,16 @@ header {
     font-family: var(--font-heading);
     font-size: 1.5rem;
     font-weight: 800;
-    color: #F8FAF9;
+    color: #ecfdf5;
 }
 
 .logo span {
-    background: linear-gradient(135deg, #0E7C7B, #2A9D8F);
-    color: #F8FAF9;
+    background: linear-gradient(135deg, #00B09B, #1de3c7);
+    color: #011a12;
     padding: 2px 6px;
     margin-left: 2px;
     border-radius: 4px;
-    box-shadow: 0 2px 8px rgba(14, 124, 123, 0.4);
+    box-shadow: 0 2px 8px rgba(0, 176, 155, 0.5);
 }
 
 .nav-menu {
@@ -338,7 +338,7 @@ header {
 }
 
 .nav-item a:hover, .nav-item a.active {
-    color: #A8DADC;
+    color: #1de3c7;
 }
 
 .nav-item a::after {
@@ -361,9 +361,9 @@ header {
 .nav-item a.nav-btn {
     padding: 8px 18px;
     font-size: 0.85rem;
-    color: #F8FAF9 !important;
-    background: #0E7C7B;
-    border: 1.5px solid #0E7C7B;
+    color: #011a12 !important;
+    background: #00B09B;
+    border: 1.5px solid #00B09B;
     border-radius: 4px;
     display: inline-flex;
     align-items: center;
@@ -375,9 +375,9 @@ header {
 }
 
 .nav-item a.nav-btn:hover {
-    background: #2A9D8F;
-    border-color: #2A9D8F;
-    color: #F8FAF9 !important;
+    background: #1de3c7;
+    border-color: #1de3c7;
+    color: #011a12 !important;
 }
 
 /* Dark mode toggle */
@@ -449,7 +449,7 @@ body.dark .theme-toggle-btn .moon-icon {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding-top: 100px;
+    padding-top: 70px;
     position: relative;
 }
 
@@ -516,7 +516,7 @@ body.dark .theme-toggle-btn .moon-icon {
     height: 100%;
     pointer-events: none;
     z-index: 0;
-    opacity: 0.45;   /* slightly more visible for ocean depth */
+    opacity: 0.85;   /* high visibility — sea turtle vibes */
 }
 
 .particle {
@@ -536,10 +536,11 @@ body.dark .theme-toggle-btn .moon-icon {
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    border: 1.5px solid rgba(var(--particle-color-rgb), 0.35);
-    background: rgba(var(--particle-color-rgb), 0.10);
-    box-shadow: 0 0 14px rgba(var(--particle-color-rgb), 0.10),
-                inset 0 0 8px rgba(255,255,255,0.12);
+    border: 2px solid rgba(29, 227, 199, 0.7);
+    background: rgba(0, 176, 155, 0.18);
+    box-shadow: 0 0 14px rgba(29, 227, 199, 0.6),
+                0 0 28px rgba(0, 176, 155, 0.35),
+                inset 0 0 10px rgba(255,255,255,0.20);
     color: transparent;
     animation: float-bubble ease-in-out infinite;
 }

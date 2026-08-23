@@ -850,104 +850,90 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
      /* ==========================================
-         BACKGROUND FLOATING PARTICLES
-         - Create/ensure a fixed global container `global-hero-particles` so the animation
-           overlays the entire page (subtle, pointer-events: none). We append it so it
-           stacks above most content but below the header.
-         ========================================== */
+        🐢 SEA TURTLE FLOATING PARTICLES
+        Fixed global overlay across entire site
+        ========================================== */
      let particlesContainer = document.getElementById('global-hero-particles');
-
      if (!particlesContainer) {
-          const globalParticles = document.createElement('div');
-          globalParticles.id = 'global-hero-particles';
-          globalParticles.className = 'hero-particles global-hero-particles';
-          // Append to body so it overlays the page content (but header remains above)
-          document.body.appendChild(globalParticles);
-          particlesContainer = globalParticles;
-     } else {
-          // If a page already has a local `#hero-particles` inside the hero, we still use
-          // the global container to ensure a consistent overlay across sections.
+         const globalParticles = document.createElement('div');
+         globalParticles.id = 'global-hero-particles';
+         globalParticles.className = 'hero-particles global-hero-particles';
+         document.body.appendChild(globalParticles);
+         particlesContainer = globalParticles;
      }
+     // Also show the inline hero container if present
+     const heroParticlesEl = document.getElementById('hero-particles');
+     if (heroParticlesEl) heroParticlesEl.style.display = '';
 
-    // 🐢 Sea Turtle vibe — ocean symbols, emoji & words
     const seaTurtleSymbols = [
         '🐢', '🌊', '🐠', '🐡', '🦀', '🦞', '🐙', '🦑', '🐚', '🪸',
         '🫧', '🌿', '🪼', '🦈', '⚓', '🐋', '🐬', '🦭', '🐟', '🌺',
         '~', '≈', '∿', '〰', '꩜', '❋', '✦', '✧', '◈', '⬡',
-        'swim', 'dive', 'reef', 'tide', 'deep', 'sea', 'wave', 'salt',
-        'kelp', 'coral', 'shell', 'mist', 'gulf', 'drift', 'float'
-    ];
-
-    // Teal/ocean colour stops for tinting each particle
-    const oceanTints = [
-        'rgba(14,124,123,VAL)',   // Turtle Teal
-        'rgba(42,157,143,VAL)',   // Sea Green
-        'rgba(168,218,220,VAL)', // Ocean Mist
-        'rgba(7,59,76,VAL)',     // Deep Ocean
-        'rgba(244,227,193,VAL)', // Sand (warm accent)
     ];
 
     function createParticles() {
         if (!particlesContainer) return;
-        particlesContainer.innerHTML = ''; // clear any previous run
+        particlesContainer.innerHTML = '';
 
-        const symbolCount = 55;
-        const bubbleCount = 20;
+        const symbolCount = 50;
+        const bubbleCount = 18;
 
         for (let i = 0; i < symbolCount; i++) {
             const particle = document.createElement('span');
             particle.className = 'particle';
-            particle.textContent = seaTurtleSymbols[Math.floor(Math.random() * seaTurtleSymbols.length)];
+            const sym = seaTurtleSymbols[Math.floor(Math.random() * seaTurtleSymbols.length)];
+            particle.textContent = sym;
 
-            particle.style.left   = `${Math.random() * 100}%`;
-            particle.style.top    = `${Math.random() * 100}%`;
-            // Emojis look better a bit smaller; text symbols can be bigger
-            const isEmoji = /\p{Emoji}/u.test(particle.textContent);
+            particle.style.left = `${Math.random() * 100}%`;
+            particle.style.top  = `${Math.random() * 100}%`;
+
+            // Emojis get larger so they're clearly visible
+            const isEmoji = /\p{Emoji_Presentation}/u.test(sym);
             particle.style.fontSize = isEmoji
-                ? `${Math.random() * 1.2 + 0.9}rem`
-                : `${Math.random() * 1.0 + 0.75}rem`;
-            particle.style.opacity = `${Math.random() * 0.30 + 0.18}`;
+                ? `${Math.random() * 1.6 + 1.4}rem`   // 1.4–3.0 rem for emojis
+                : `${Math.random() * 1.2 + 1.0}rem`;  // 1.0–2.2 rem for glyphs
 
-            // Gentle ocean-drift: slow, long durations with spread delays
-            const delay    = Math.random() * 18;
-            const duration = Math.random() * 14 + 18;   // 18-32 s — very slow
+            // High opacity — fully visible
+            particle.style.opacity = `${Math.random() * 0.35 + 0.55}`;
+
+            const delay    = Math.random() * 14;
+            const duration = Math.random() * 12 + 16; // 16–28 s slow drift
             particle.style.animationDelay    = `${delay}s`;
             particle.style.animationDuration = `${duration}s`;
-            // Pick a random drift animation variant
+
             const variants = ['float-particle', 'float-particle-sway', 'float-particle-sway-r'];
             particle.style.animationName = variants[Math.floor(Math.random() * variants.length)];
 
-            // Random teal tint via drop-shadow so emojis keep their look
-            const tint = oceanTints[Math.floor(Math.random() * oceanTints.length)].replace('VAL', '0.55');
-            particle.style.filter = `drop-shadow(0 0 6px ${tint})`;
+            // Vibrant green glow — matches the new palette
+            const glows = [
+                'rgba(0,176,155,0.9)',
+                'rgba(29,227,199,0.9)',
+                'rgba(16,185,129,0.9)',
+                'rgba(110,231,183,0.9)',
+            ];
+            const g = glows[Math.floor(Math.random() * glows.length)];
+            particle.style.filter = `drop-shadow(0 0 8px ${g}) drop-shadow(0 0 16px ${g})`;
 
             particlesContainer.appendChild(particle);
         }
 
-        // Soft bubble circles — gentle bobbing
+        // Glowing bubble circles
         for (let i = 0; i < bubbleCount; i++) {
             const circle = document.createElement('span');
             circle.className = 'particle particle-circle';
-            circle.textContent = '';
 
-            const size = Math.random() * 28 + 10;      // 10-38 px
+            const size = Math.random() * 30 + 14;
             circle.style.width   = `${size}px`;
             circle.style.height  = `${size}px`;
             circle.style.left    = `${Math.random() * 100}%`;
             circle.style.top     = `${Math.random() * 100}%`;
-            circle.style.opacity = `${Math.random() * 0.18 + 0.08}`;
+            circle.style.opacity = `${Math.random() * 0.4 + 0.35}`;
 
-            const delay    = Math.random() * 20;
-            const duration = Math.random() * 12 + 16;   // 16-28 s
+            const delay    = Math.random() * 16;
+            const duration = Math.random() * 10 + 14;
             circle.style.animationDelay    = `${delay}s`;
             circle.style.animationDuration = `${duration}s`;
             circle.style.animationName     = 'float-bubble';
-
-            // Randomise teal/mist tint on bubbles
-            const tint = oceanTints[Math.floor(Math.random() * 3)].replace('VAL', '0.4');
-            circle.style.background   = tint;
-            circle.style.borderColor  = oceanTints[1].replace('VAL', '0.5');
-            circle.style.boxShadow    = `0 0 ${Math.round(size * 0.6)}px ${tint}`;
 
             particlesContainer.appendChild(circle);
         }
